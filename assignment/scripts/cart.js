@@ -1,13 +1,31 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
+let basket =[];
 
+function addItem(item){
+    basket.push(item);
+    return true;
+}
+addItem('eggs');
+addItem('milk');
+addItem('bread');
+console.log(basket);
+console.log('Should return true to indicate the item was added:', addItem());
 
+function listItems() {
+    for (let item of basket) {
+        console.log(item);
+    }
+  }
+  listItems();
 
+function empty(){
+    basket=[]
+}
 
-
-
-
+empty();
+console.log('empty[]:' , basket);
 
 
 
